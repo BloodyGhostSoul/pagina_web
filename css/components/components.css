@@ -1,0 +1,248 @@
+@import url(../abstracts/vars.css);
+@import url(../base/base.css);
+
+.container-login {
+    width: 529px;
+    height: 499px;
+    margin: auto;
+    margin-top: 120px;
+
+    position: relative;
+    border-radius: 15px;
+    background: var(--clr-grey-1);
+}
+
+.container-login-2 {
+    background-image: url(../../imgs/dish1.png);
+    max-width: 100%;
+    min-height: 768px;
+  
+}
+
+.container-register-recipe-2 {
+    background-image: url(../../imgs/register_recipe.png);
+    max-width: 100%;
+    height: auto;
+}
+
+.container-forgot-passsword {
+    width: 529px;
+    height: 425px;
+    margin: auto;
+    margin-top: 120px;
+
+    position: relative;
+    border-radius: 15px;
+    background: var(--clr-grey-1);
+}
+
+.container-register {
+    width: 400px;
+    height: 787px;
+    margin-left: 120px;
+    margin-top: 100px;
+    margin-right: 120px;
+    margin-bottom: 100px;
+
+    position: relative;
+    border-radius: 15px;
+    background: var(--clr-grey-1);
+}
+
+.container-register-2 {
+    background-image: url(../../imgs/register.png);
+    max-width: 100%;
+    height: auto;
+}
+
+.container-login-admin {
+    width: 529px;
+    height: 529px;
+    margin-left: 120px;
+    margin-top: 100px;
+    margin-right: 120px;
+    margin-bottom: 100px;
+
+    position: relative;
+    border-radius: 15px;
+    background: var(--clr-grey-1);
+}
+
+.btn-login {
+
+    border-radius: 0.2rem;
+    border: none;
+    background: var(--clr-yellow);
+}
+
+.btn-curved {
+    display: inline-flex;
+    background: var(--clr-yellow);
+    border: solid;
+    border-radius: 0.5rem;
+    border-color: var(--clr-yellow);
+    color: var(--clr-black);
+    text-decoration: none;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    transition: .5s;
+}
+
+.btn-curved:hover {
+    background: transparent;
+}
+
+.fa-solid {
+    color: var(--clr-black);
+}
+
+.fa-solid:hover {
+    color: var(--clr-yellow);
+}
+
+.card {
+    display: inline-flex;
+    background: var(--clr-grey-4);
+    border-radius: .5rem;
+    color: var(--clr-black);
+    text-decoration: none;
+    border: none;
+    width: 124px;
+    word-wrap: break-word;
+}
+
+.card:hover {
+    background: var(--clr-yellow);
+    color: var(--clr-black);
+}
+
+.card-variant {
+    display: inline-flex;
+    background: var(--clr-grey-4);
+    border-radius: .5rem;
+    text-decoration: none;
+    color: var(--clr-black);
+    word-wrap: break-word;
+}
+
+.card-variant:hover {
+    background: var(--clr-yellow);
+    color: var(--clr-black);
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background: var(--clr-grey-1);
+    border-radius: 50%;
+}
+
+.circle-variant {
+    width: 25px;
+    height: 25px;
+    background: var(--clr-grey-1);
+    border-radius: 50%;
+}
+
+.circle-profile {
+    display: inline-flex;
+    width: 200px;
+    height: 200px;
+    background: var(--clr-white);
+    border-radius: 50%;
+}
+
+.profile-badge {
+    width: 800px;
+    background: var(--clr-grey-1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.dropdown-main {
+    background: none;
+    border: none;
+    display: inline-flex;
+    color: var(--clr-black);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    transition: .5s;
+}
+
+.list-link {
+    color: var(--clr-black);
+    text-decoration: none;
+}
+
+.list-link:hover {
+    color: var(--clr-grey-3);
+}
+
+.arrow-link {
+    scale: 1.7;
+    color: var(--clr-black);
+    text-decoration: none;
+}
+
+.slide-arrow {
+    border: none;
+    background: none;
+}
+
+.header-admin {
+    background: var(--clr-grey-4);
+}
+
+.container-grey {
+    display: flex;
+    flex-direction: column;
+    max-width: 529px;
+    background: var(--clr-grey-1);
+    border-radius: .5rem;
+    position: relative;
+    /*text-decoration: none;*/
+    color: var(--clr-black);
+    /*word-wrap: break-word;*/
+}
+
+@media (max-width: 576px) {
+
+    .container-login-2 {
+        background: none;
+    }
+
+    .container-grey {
+        background: none;
+    }
+
+    .container-register-2 {
+        background: none;
+    }
+
+    .container-register-recipe-2 {
+        background: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .container-login-2 {
+        background: none;
+    }
+
+    .container-grey {
+        background: none;
+    }
+
+    .container-register-2 {
+        background: none;
+    }
+
+    .container-register-recipe-2 {
+        background: none;
+    }
+}

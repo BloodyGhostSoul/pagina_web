@@ -1,0 +1,20 @@
+.text-light {
+    color: var(--clr-white);
+}
+
+.text-dark {
+    color: var(--clr-black);
+}
+
+.text-yellow {
+    color: var(--clr-yellow);
+}
+
+.text-grey {
+    color:var(--clr-grey-3);
+}
+
+.content{
+    font-family: var(--ff-secondary);
+    color: var(--clr-grey-3);
+}

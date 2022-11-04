@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GOOGLE FONTS
+    Lato-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!--GOOGLE FONTS
+    Noto serif-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+        onerror="this.onerror=null;this.href='./css/vendors/bootstrap.min.css';">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <!--//////////////////////////////////////////Header///////////////////////////////////////////-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container gap-3">
+                <a class="navbar-brand" href="#"> <img class="img-fluid w-50" src="./imgs/LOGO NEGRO.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex mx-auto">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn-curved" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-scroll gap-2"
+                        style="--bs-scroll-height: 150px;">
+                        <li class="nav-item d-flex me-2">
+                            <a class="nav-link align-self-center fw-bold" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item d-flex me-2">
+                            <a class="nav-link align-self-center fw-bold" href="#">Acerca de</a>
+                        </li>
+                        <li class="nav-item d-flex me-2">
+                            <a class="nav-link align-self-center fw-bold" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="btn-curved nav-link me-2 fw-bold" href="#">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="btn-curved nav-link fw-bold" href="#">Registrarse</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid container-login-2">
+        <div class="d-flex justify-content-center">
+            <div class="align-self-center container-grey my-5">
+                <h1 class="fw-bold text-center mt-5">Inicia Sesión</h1>
+                <p class="text-center content">Te damos la bienvenida</p>
+
+                <form action="" method="">
+                    <div class="row d-flex justify-content-center gap-3 mx-2">
+                        <div class="mb-3 col-lg-9 col-md-9 col-sm-12">
+                            <label for="usuario" class="form-label fw-bold">Usuario</label>
+                            <input id="usuario" class="form-control" type="text" placeholder="Usuario">
+                        </div>
+                        <div class="mb-3 col-lg-9 col-md-9 col-sm-12">
+                            <label for="contraseña" class="form-label fw-bold">Contraseña <span><a
+                                        class="text-link px-2" href="">¿Has olvidado tu
+                                        contraseña?</a></span></label>
+                            <input id="contraseña" class="form-control" type="text" placeholder="Contraseña">
+                        </div>
+                    </div>
+                    <button class="btn-curved fw-bold mx-auto d-flex justify-content-center mt-4 mb-5">Iniciar
+                        Sesión</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
