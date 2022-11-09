@@ -2,3 +2,16 @@
     background: var(--clr-black);
     color: var(--clr-white);
 }
+
+.footer-link{
+    display: block;
+    text-decoration: none;
+    color: var(--clr-white);
+    opacity: 60%;
+    transition: .5s;
+}
+
+.footer-link:hover{
+    opacity: 100%;
+    transform: translate(.5rem);
+}

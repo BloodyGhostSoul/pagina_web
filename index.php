@@ -37,11 +37,10 @@
 
     <!--/////////////////////////////////Header////////////////////////////////////-->
     <header>
-        <h2><?php echo $valor; ?></h2>
         <!--//////////////////////////////////////////Header///////////////////////////////////////////-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container gap-3">
-                <a class="navbar-brand" href="#"> <img class="img-fluid w-50" src="./imgs/LOGO NEGRO.png" alt="Logo">
+                <a class="navbar-brand" href="#"> <img class="img-fluid w-50" src="./imgs/black-logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,10 +64,10 @@
                             <a class="nav-link align-self-center fw-bold" href="#">Contact</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="btn-curved nav-link me-2 fw-bold" href="#">Iniciar Sesión</a>
+                            <a class="btn-curved nav-link me-2 fw-bold" href="login_user_v2.html">Iniciar Sesión</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="btn-curved nav-link fw-bold" href="#">Registrarse</a>
+                            <a class="btn-curved nav-link fw-bold" href="register.html">Registrarse</a>
                         </li>
                     </ul>
                 </div>
@@ -335,8 +334,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion" id="accordionPanelsStayOpenExample">
+
+
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                             <button class="fw-bold lead text-dark accordion-button collapsed" type="button"
@@ -369,8 +368,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion" id="accordionPanelsStayOpenExample">
+
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                             <button class="fw-bold lead text-dark accordion-button collapsed" type="button"
@@ -392,9 +390,10 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
 
+                    </div>
+
+                </div>
             </div>
 
             <div class="col-lg-9 col-sm-12">
@@ -411,8 +410,10 @@
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
+                                    </li>
                                     <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
                                     </li>
                                 </ul>
@@ -429,8 +430,10 @@
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
+                                    </li>
                                     <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
                                     </li>
                                 </ul>
@@ -447,8 +450,10 @@
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
+                                    </li>
                                     <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
                                     </li>
                                 </ul>
@@ -465,8 +470,10 @@
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time</li>
-                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
+                                    </li>
                                     <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
                                     </li>
                                 </ul>
@@ -476,6 +483,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+
     </section>
 
 
@@ -485,7 +494,7 @@
 
             <div class="row mb-3">
                 <div class="col-lg-3 col-sm-6 my-4">
-                    <img src="./imgs/logo-blanco.png" alt="Logo">
+                    <img src="./imgs/white-logo.png" alt="Logo">
                 </div>
                 <div class="col-lg-3 col-sm-6 my-4">
                     <h5 class="fw-bold mb-3">Inicio</h5>
