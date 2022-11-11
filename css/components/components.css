@@ -172,7 +172,7 @@
 }
 
 .arrow-link {
-    scale: 1.7;
+    transform: scale(1.7);    
     color: var(--clr-black);
     text-decoration: none;
 }
@@ -197,6 +197,7 @@
     color: var(--clr-black);
     /*word-wrap: break-word;*/
 }
+
 
 @media (max-width: 576px) {
 
