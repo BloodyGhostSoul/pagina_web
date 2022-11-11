@@ -28,205 +28,175 @@
 </head>
 
 <body>
-    <section class=" row ">
+    <div class="row d-flex justify-content-center ">
 
-
-        <div class="col container-register-2">
+        <div class="col container-fluid container-register-2">
 
         </div>
 
-        <div class="col">
-            <div class="mt-4">
-                <h1 class="title-xlg text-center pt-5">Registro de recetas</h1>
-                <p class="text-phar text-center pb-4">Ingrese los datos de la receta</p>
-                <h2 class="title-sm px-5">Nombre de la receta</h2>
-                <div class="mb-2 ps-5">
-                    <div class="input-group pe-5">
-                        <div class="form-floating">
-                            <input type="text" class="form-control " id="floatingInputGroup1" placeholder="Username">
-                            <label for="floatingInputGroup1 ">Ingrese el nombre de la receta</label>
-                        </div>
-                    </div>
+        <form action="" method="" class="container-grey">
+
+
+            <h1 class="title-xlg text-center pt-5">Registro de recetas</h1>
+            <p class="text-phar text-center pb-4">Ingrese los datos de la receta</p>
+            <div class="row d-flex justify-content-center gap-3 mx-2">
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <label for="nombreReceta" class="form-label fw-bold">Nombre de la Receta</label>
+                    <input id="nombreReceta" class="form-control" type="text" placeholder="Nombre Receta">
                 </div>
 
-            </div>
 
-            <div class="pb-4 row">
-                <div class="row">
+                <div class="row col-lg-9 ">
                     <div class="col ">
-                        <h2 class="title-sm px-5">Imagen</h2>
-                        <div class="mb-3 ps-5">
-                            <input class="form-control" type="file" id="formFileMultiple" multiple>
-                        </div>
+                        <label for="imagen" class="form-label fw-bold">Imagen</label>
+                        <input class="form-control" type="file" id="imagen" multiple>
                     </div>
 
                     <div class="col">
-                        <div class="col">
-                            <h2 class="title-sm ps-2">Complejidad</h2>
-                            <div class="mb-3 pe-4 ps-2 ">
-                                <select class="form-select form-select-sm py-2">
-                                    <option selected>Elija la Complejidad</option>
-                                    <option value="1">Fácil</option>
-                                    <option value="2">Medio</option>
-                                    <option value="3">Difícil</option>
-                                </select>
-                            </div>
+                        <div class="mb-3  ps-2 ">
+                            <label for="complejidad" class="form-label fw-bold" >Complejidad</label>
+
+                            <select class="form-select form-select-sm py-2">
+                                <option selected>Elija la Complejidad</option>
+                                <option value="1">Fácil</option>
+                                <option value="2">Medio</option>
+                                <option value="3">Difícil</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="pb-4 row">
-                <div class="col ">
-                    <h2 class="title-sm px-5">Tiempo de preparación</h2>
-                    <div class="mb-2 ps-5 pe-2">
+                <div class="row col-lg-9 ">
+                    <div class="col ">
+                        <label for="tiempoPreparacion" class="form-label fw-bold">Tiempo de preparación</label>
                         <div class="input-group">
                             <div class="form-floating">
-                                <input type="text" class="form-control " id="floatingInputGroup1"
-                                    placeholder="Username">
-                                <label for="floatingInputGroup1">Ingrese el tiempo de preparación</label>
+                                <input type="text" class="form-control " id="tiempoPreparacion"
+                                    placeholder="Tiempo de preparacion">
+                                <label for="tiempoPreparacion">Ingrese el tiempo de preparación</label>
                             </div>
                             <span class="input-group-text px-2">min</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="col">
-                    <h2 class="title-sm ">Categoría</h2>
-                    <div class="mb-3 pe-5">
-                        <select class="form-select form-select-sm py-3">
-                            <option selected>Elija la Categoría</option>
-                            <option value="1">Postre</option>
-                            <option value="2">Pasta</option>
-                            <option value="3">Salsa</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pb-4 row">
-                <div class="col ">
-                    <h2 class="title-sm px-5">Tiempo de cocción</h2>
-                    <div class="mb-2 ps-5">
-                        <div class="input-group">
-                            <div class="form-floating">
-                                <input type="text" class="form-control " id="floatingInputGroup1"
-                                    placeholder="Username">
-                                <label for="floatingInputGroup1">Ingrese el tiempo de Cocción</label>
-                            </div>
-                            <span class="input-group-text px-2">min</span>
+                    <div class="col mt-4">
+                        <label for="categoria" class="form-label fw-bold">Categoría</label>
+                        <div class="mb-3 pe-5">
+                            <select class="form-select form-select-sm  py-3">
+                                <option selected>Elija la Categoría</option>
+                                <option value="1">Postre</option>
+                                <option value="2">Pasta</option>
+                                <option value="3">Salsa</option>
+                            </select>
                         </div>
                     </div>
                 </div>
 
-                <div class="col">
-                    <h2 class="title-sm ">Ocasión</h2>
-                    <div class="mb-3 pe-5">
+                <div class="row col-lg-9 ">
+                    <div class="col ">
+                        <label for="tiempodeCoccion" class="form-label fw-bold">Tiempo de Cocción</label>
+                        <div class="input-group">
+                            <div class="form-floating">
+                                <input type="text" class="form-control " id="tiempodeCoccion" placeholder="Username">
+                                <label for="tiempodeCoccion">Ingrese el tiempo de Cocción</label>
+                            </div>
+                            <span class="input-group-text">min</span>
+                        </div>
+                    </div>
+
+                    <div class="col mt-1">
+                        <label for="ocasion" class="form-label fw-bold">Ocasión</label>
                         <select class="form-select form-select-sm py-3">
                             <option selected>Elija la Ocasión</option>
                             <option value="1">Reunión Familiar</option>
                             <option value="2">Trabajo</option>
                             <option value="3">Reunion amistosa</option>
                         </select>
+
                     </div>
                 </div>
-            </div>
 
-            <div class="pb-4 row">
-                <div class="col ">
-                    <h2 class="title-sm px-5">Tiempo Total</h2>
-                    <div class="mb-2 ps-5">
-                        <div class="input-group">
-                            <div class="form-floating">
-                                <input type="text" class="form-control " id="floatingInputGroup1"
-                                    placeholder="Username">
-                                <label for="floatingInputGroup1">Ingrese el tiempo Total</label>
+                <div class="row col-lg-9 ">
+                    <div class="col ">
+                        <label for="tiempoTotal" class="form-label fw-bold">Tiempo Total</label>
+                        <div class="mb-2">
+                            <div class="input-group">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control " id="tiempoTotal"
+                                        placeholder="Tiempo Total">
+                                    <label for="tiempoTotal">Ingrese el tiempo Total</label>
+                                </div>
+                                <span class="input-group-text px-2">min</span>
                             </div>
-                            <span class="input-group-text px-2">min</span>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label for="recetaDestacada" class="form-label fw-bold">¿Receta destacada?</label>
+                        <div class="mb-3">
+                            <select class="form-select form-select-sm py-3">
+                                <option selected>Elija una opción</option>
+                                <option value="1">Pie de limon</option>
+                                <option value="2">Tres Leches</option>
+                                <option value="3">Pan con dulce de leche</option>
+                            </select>
                         </div>
                     </div>
                 </div>
 
-                <div class="col">
-                    <h2 class="title-sm ">¿Receta destacada?</h2>
-                    <div class="mb-3 pe-5">
-                        <select class="form-select form-select-sm py-3">
-                            <option selected>Elija una opción</option>
-                            <option value="1">Pie de limon</option>
-                            <option value="2">Tres Leches</option>
-                            <option value="3">Pan con dulce de leche</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pb-4 row">
-                <div class="col ">
-                    <h2 class="title-sm px-5">Porciones</h2>
-                    <div class="mb-2 ps-5">
+                <div class="row col-lg-9 ">
+                    <div class="col ">
+                        <label for="porciones" class="form-label fw-bold">Porciones</label>
                         <div class="input-group">
                             <div class="form-floating">
-                                <input type="text" class="form-control " id="floatingInputGroup1"
-                                    placeholder="Username">
-                                <label for="floatingInputGroup1 ">Ingrese las porciones</label>
+                                <input type="text" class="form-control " id="porciones" placeholder="Porciones">
+                                <label for="porciones">Ingrese las porciones</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col ">
+                        <label for="votos" class="form-label fw-bold">Votos de la Receta</label>
+                        <div class="input-group">
+                            <div class="form-floating">
+                                <input type="text" class="form-control " id="votos" placeholder="Votos">
+                                <label for="votos">Ingrese los votos de la receta</label>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col ">
-                    <h2 class="title-sm">Votos de la receta</h2>
-                    <div class="mb-2 pe-5">
-                        <div class="input-group">
-                            <div class="form-floating">
-                                <input type="text" class="form-control " id="floatingInputGroup1"
-                                    placeholder="Username">
-                                <label for="floatingInputGroup1">Ingrese los votos de la receta</label>
-                            </div>
-                        </div>
+
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <label for="descripcion" class="form-label fw-bold">Descripción</label>
+                    <textarea id="descripcion" class="form-control" placeholder="Descripción"></textarea>
+                </div>
+
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <label for="instrucciones" class="form-label fw-bold">Instrucciones de preparacion</label>
+                    <textarea id="instrucciones" class="form-control" placeholder="Instrucciones"></textarea>
+                </div>
+
+
+                <div class="row mt-2">
+                    <div class="col d-flex justify-content-center mt-2">
+                        <button class="btn-curved center title-sm py-2 px-3 m-auto justify-content ">Registrar
+                            Receta</button>
                     </div>
+
+                    <div class="col d-flex justify-content-center mt-2">
+                        <button class="btn-curved center title-sm py-2 px-3 m-auto justify-content ">Modificar
+                            Receta</button>
+                    </div>
+
                 </div>
             </div>
+        </form>
+    </div>
 
-            <div class="form-floating px-5 pb-4">
-                <h2 class="title-sm">Descripción</h2>
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea" class="pt-5 px-5 ">Descripción de la receta</label>
-            </div>
-
-            <div class="form-floating px-5 pb-4">
-                <h2 class="title-sm">Lista de Ingredientes</h2>
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea" class="pt-5 px-5 ">Ingrese la lista de Ingredientes</label>
-            </div>
-
-            <div class="form-floating px-5 pb-4">
-                <h2 class="title-sm">Instrucciones de preparacion</h2>
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea" class="pt-5 px-5 ">Ingrese las Instrucciones de preparación</label>
-            </div>
-
-
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-                    <button class="btn-curved center title-sm py-2 px-3 m-auto justify-content ">Registrar Receta</button>
-                </div>
-
-                <div class="col d-flex justify-content-center">
-                    <button class="btn-curved center title-sm py-2 px-3 m-auto justify-content ">Modificar Receta</button>
-                </div>
-                
-            </div>
-        </div>
-
-
-
-
-
-    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </body>
 
