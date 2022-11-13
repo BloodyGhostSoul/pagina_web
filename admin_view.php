@@ -10,9 +10,9 @@
         "tb_recipes.id_recipe",
         "tb_recipes.recipe_name",    
         "tb_recipes.is_featured",    
-        "tb_recipes_category.recipe_category",
-        "tb_recipes_occasion.recipe_occasion",
-        "tb_recipes_complex.recipe_complex",
+        "tb_recipe_category.recipe_category",
+        "tb_recipe_occasion.recipe_occasion",
+        "tb_recipe_complex.recipe_complex",
     ]);
 
     
@@ -108,90 +108,31 @@
                             <h6 class="col-lg-2 col-sm-6 fw-bold">Categoría</h6>
                             <h6 class="col-lg-2 col-sm-6 fw-bold">Ocasión</h6>
                             <h6 class="col-lg-2 col-sm-6 fw-bold">Complejidad</h6>
-                            <h6 class="col-lg-1 col-sm-3 fw-bold">Destacada</h6>
+                            <h6 class="col-lg-2 col-sm-6 fw-bold">Destacada</h6>
                             <h6 class="col-lg-1 col-sm-3 fw-bold">Editar</h6>
                             <h6 class="col-lg-1 col-sm-3 fw-bold">Eiminar</h6>
                         </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row d-flex justify-content-between px-2 pt-1">
+                    </li>                   
 
-                            <?php 
-                                echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$mo."</p>";
-                                echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[0]["recipe_category"]."</p>";
-                                $len = count($data);
+                    <?php 
+                        $len = count($data);
+                        for($i=0; $i<$len; $i++){
 
-                                for($i=0; $i<$len; $i++){
-                                    echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$mo."</p>";
-                                    echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_category"]."</p>";
-                                    echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_occasion"]."</p>";
-                                    echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_complex"]."</p>";
-                                    echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["is_featured"]."</p>";
-                                    echo "<a class='col-lg-1 col-sm-3 m-0' href='edit.php?id=".$data[$i]["id_recipe"]."'><i
-                                    class='align-self-center icon-link fa-solid fa-pen-to-square'></i></a>";
-                                    echo "<a class='col-lg-1 col-sm-3 m-0' href='delete.php?id=".$data[$i]["id_recipe"]."'><i
-                                    class='align-self-center icon-link fa-solid fa-trash-can'></i></a>";
-                                }
-                                
-                            ?>
-                        
-                            
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row d-flex justify-content-between px-2 pt-1">
-
-                            <p class="col-lg-2 col-sm-6-2 m-0">Pancakes</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Desayunos</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Todas</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Fácil</p>
-                            <p class="col-lg-1 col-sm-3 m-0 ">0</p>
-                            <a class="col-lg-1 col-sm-3 m-0" href="#"> <i
-                                    class="align-self-center fa-solid fa-pen-to-square"></i></a>
-                            <a class="col-lg-1 col-sm-3 m-0" href="#"> <i
-                                    class="align-self-center fa-solid fa-trash-can"></i></a>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row d-flex justify-content-between px-2 pt-1">
-
-                            <p class="col-lg-2 col-sm-6-2 m-0">Pancakes</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Desayunos</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Todas</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Fácil</p>
-                            <p class="col-lg-1 col-sm-3 m-0 ">0</p>
-                            <a class="col-lg-1 col-sm-3 m-0" href="#"> <i
-                                    class="align-self-center fa-solid fa-pen-to-square"></i></a>
-                            <a class="col-lg-1 col-sm-3 m-0" href="#"> <i
-                                    class="align-self-center fa-solid fa-trash-can"></i></a>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row d-flex justify-content-between px-2 pt-1">
-                            <p class="col-lg-2 col-sm-6-2 m-0">Pancakes</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Desayunos</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Todas</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Fácil</p>
-                            <p class="col-lg-1 col-sm-3 m-0 ">0</p>
-                            <a class="col-lg-1 col-sm-3 m-0" href="#"> <i
-                                    class="align-self-center fa-solid fa-pen-to-square"></i></a>
-                            <a class="col-lg-1 col-sm-3 m-0" href="#"> <i
-                                    class="align-self-center fa-solid fa-trash-can"></i></a>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row d-flex justify-content-between px-2 pt-1">
-                            <p class="col-lg-2 col-sm-6-2 m-0">Pancakes</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Desayunos</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Todas</p>
-                            <p class="col-lg-2 col-sm-6 m-0">Fácil</p>
-                            <p class="col-lg-1 col-sm-3 m-0 ">0</p>
-                            <a class="col-lg-1 col-sm-3 m-0" href="#"> <i
-                                    class="align-self-center fa-solid fa-pen-to-square"></i></a>
-                            <a class="col-lg-1 col-sm-3 m-0" href="#"> <i
-                                    class="align-self-center fa-solid fa-trash-can"></i></a>
-                        </div>
-                    </li>
+                            echo "<li class='list-group-item'>";
+                            echo  "<div class='row d-flex justify-content-between px-2 pt-1'>";
+                                echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_name"]."</p>";
+                                echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_category"]."</p>";
+                                echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_occasion"]."</p>";
+                                echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_complex"]."</p>";
+                                echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["is_featured"]."</p>";
+                                echo "<a class='col-lg-1 col-sm-3 m-0' href='edit.php?id=".$data[$i]["id_recipe"]."'><i
+                                class='align-self-center icon-link fa-solid fa-pen-to-square'></i></a>";
+                                echo "<a class='col-lg-1 col-sm-3 m-0' href='delete.php?id=".$data[$i]["id_recipe"]."'><i
+                                class='align-self-center icon-link fa-solid fa-trash-can'></i></a>";
+                            echo "</div>";
+                            echo "</li>";
+                        }
+                    ?>      
 
                 </ul>
             </div>
