@@ -36,21 +36,20 @@
                 <h1 class="fw-bold text-center mt-5">Inicia Sesión</h1>
                 <p class="text-center content">Te damos la bienvenida</p>
 
-                <form action="" method="">
+                <form action="login.php" method="post">
                     <div class="row d-flex justify-content-center gap-3 mx-2">
                         <div class="mb-3 col-lg-9 col-md-9 col-sm-12">
                             <label for="usuario" class="form-label fw-bold">Usuario</label>
-                            <input id="usuario" class="form-control" type="text" placeholder="Usuario">
+                            <input id="usuario" class="form-control" type="text" name="usuario" placeholder="Usuario">
                         </div>
                         <div class="mb-3 col-lg-9 col-md-9 col-sm-12">
                             <label for="contraseña" class="form-label fw-bold">Contraseña <span><a
                                         class="text-link px-2" href="">¿Has olvidado tu
                                         contraseña?</a></span></label>
-                            <input id="contraseña" class="form-control" type="password" placeholder="Contraseña">
+                            <input id="contraseña" class="form-control" type="password" name="contraseña" placeholder="Contraseña">
                         </div>
                     </div>
-                    <button class="btn-curved fw-bold mx-auto d-flex justify-content-center mt-4 mb-3">Iniciar
-                        Sesión</button>
+                    <input class="btn-curved text-dark mx-auto fw-bold d-flex justify-content-center mt-4 mb-3" type="submit" value="Iniciar Sesión">
                     <p class=" text-center text-content">¿No tienes una cuenta? <span> <a class="text-link"
                                 href="">Registrate</a></span></p>
                 </form>

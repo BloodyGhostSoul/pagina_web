@@ -1,3 +1,8 @@
+<?php 
+    require 'db.php';
+
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,45 +37,47 @@
     <div class="container-fluid container-img p-0 m-0">
         <div class="row d-flex justify-content-center p-0 m-0">
             <div class="container-grey my-5 py-5">
-                <form action="" method="">
+                <form action="adduser.php" method="post">
                     <h1 class="fw-bold text-center mt-4">Registrarse</h1>
                     <p class="text-center content">Te damos la bienvenida</p>
                     <div class="row d-flex justify-content-center gap-3 mx-2">
                         <div class="col-lg-9 col-md-9 col-sm-12">
                             <label for="nombre" class="form-label fw-bold">Nombre</label>
-                            <input id="nombre" class="form-control" type="text" placeholder="Nombre">
+                            <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombre">
                         </div>
                         <div class="row col-lg-9 col-md-9 col-sm-12 p-0">
                             <div class="col">
                                 <label for="primerApellido" class="form-label fw-bold">Primer Apellido</label>
-                                <input id="primerApellido" class="form-control" type="text"
+                                <input id="primerApellido" class="form-control" name="primerApellido" type="text"
                                     placeholder="Primer Apellido">
                             </div>
                             <div class=" col">
                                 <label for="segundoApellido" class="form-label fw-bold">Segundo Apellido</label>
-                                <input id="segundoApellido" class="form-control" type="text"
+                                <input id="segundoApellido" class="form-control" name="segundoApellido" type="text"
                                     placeholder="Segundo Apellido">
                             </div>
                         </div>
 
                         <div class=" col-lg-9 col-md-9 col-sm-12">
                             <label for="correo" class="form-label fw-bold">Correo</label>
-                            <input id="correo" class="form-control" type="text" placeholder="Correo">
+                            <input id="correo" class="form-control" type="text" name="correo" placeholder="Correo">
                         </div>
 
                         <div class=" col-lg-9 col-md-9 col-sm-12">
                             <label for="usuario" class="form-label fw-bold">Usuario</label>
-                            <input id="usuario" class="form-control" type="text" placeholder="Usuario">
+                            <input id="usuario" class="form-control" type="text" name="usuario" placeholder="Usuario">
                         </div>
 
                         <div class=" col-lg-9 col-md-9 col-sm-12">
                             <label for="contraseña" class="form-label fw-bold">Contraseña </label>
-                            <input id="contraseña" class="form-control" type="text" placeholder="Contraseña">
+                            <input id="contraseña" class="form-control" type="password" name="contraseña" placeholder="Contraseña">
                         </div>
 
                     </div>
-                    <button
-                        class="btn-curved fw-bold mx-auto d-flex justify-content-center mt-4 mb-3">Registrarse</button>
+                    <input class="btn-curved text-dark mx-auto fw-bold d-flex justify-content-center mt-4 mb-3" type="submit" value="Registrarse">
+
+                     <!--<button                    
+                        class="btn-curved fw-bold mx-auto d-flex justify-content-center mt-4 mb-3" >Registrarse</button>-->
                     <p class="text-center content">Al unirte, aceptas los <ins>Términos y Condiciones</ins></p>
                 </form>
             </div>
