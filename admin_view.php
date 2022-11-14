@@ -125,7 +125,7 @@
                                 echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_occasion"]."</p>";
                                 echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["recipe_complex"]."</p>";
                                 echo "<p class='col-lg-2 col-sm-6-2 m-0'>".$data[$i]["is_featured"]."</p>";
-                                echo "<a class='col-lg-1 col-sm-3 m-0' href='edit.php?id=".$data[$i]["id_recipe"]."'><i
+                                echo "<a class='col-lg-1 col-sm-3 m-0' href='modify_recipe.php?id=".$data[$i]["id_recipe"]."'><i
                                 class='align-self-center icon-link fa-solid fa-pen-to-square'></i></a>";
                                 echo "<a class='col-lg-1 col-sm-3 m-0' href='delete.php?id=".$data[$i]["id_recipe"]."'><i
                                 class='align-self-center icon-link fa-solid fa-trash-can'></i></a>";
