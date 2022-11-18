@@ -12,4 +12,6 @@
         "correo"=>$_POST["correo"],
         "password"=> $pass
     ]);
+    header("Location:login.html");
+    
 ?>

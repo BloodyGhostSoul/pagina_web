@@ -239,8 +239,8 @@
 
                         <div class="col-lg-7 col-md-9 col-sm-12 my-4">
                             <label for="descripcion" class="form-label fw-bold">Descripción</label>
-                            <input id="descripcion" class="form-control" name="descripcion" type="text"
-                            placeholder="Descripción" value="<?php echo $data[0]["recipe_description"]; ?>">
+                            <textarea id="descripcion" class="form-control" name="descripcion" type="text"
+                            placeholder="Descripción"><?php echo $data[0]["recipe_description"]; ?></textarea>
 
                         <div class="col-lg-7 col-md-9 col-sm-12 my-4">
                             <label for="ingredientes" class="form-label fw-bold">Ingredientes</label>

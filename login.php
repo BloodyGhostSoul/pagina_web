@@ -19,9 +19,11 @@
                 
                 header("Location:admin_view.php");
             }else{
+                header("Location:login.html");
                 echo "wrong usuario or password";
             }
         }else{
+            header("Location:login.html");
             echo "wrong usuario or password";
         }
 
