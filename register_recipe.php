@@ -200,9 +200,13 @@
                         </div>
 
                         <div class="col-lg-7 col-md-9 col-sm-12 my-4">
-                            <label for="ingredientes" class="form-label fw-bold">Ingredientes</label>
-                            <textarea id="ingredientes" class="form-control" name="ingredientes"
-                            placeholder="Ingredientes"></textarea>
+                            <label for="ingredientes" class="form-label fw-bold">Ingredientes</label>                           
+                            
+                            <div id="ingredients">
+                                
+                            </div>
+                            <button type="button" id="add-ingredient">Añadir ingredientes</button>
+    
                         </div>
 
                         <div class="col-lg-7 col-md-9 col-sm-12 my-4">
@@ -214,8 +218,7 @@
 
                     <div class="d-flex justify-content-start">
                         <div class="col-lg-6 col-sm-6 my-4">
-                            <input class="btn-curved text-dark fw-bold mb-4 me-3" type="submit" value="Registrar Receta">
-                            <input class="btn-curved text-dark me-2 fw-bold" type="submit" value="Modificar Receta">                            
+                            <input class="btn-curved text-dark fw-bold mb-4 me-3" type="submit" value="Registrar Receta">                           
                         </div>
                     </div>
                 </div>
@@ -251,8 +254,8 @@
                         </ul>
                     </div>
                     <div class="col-lg-3 col-sm-6 my-4">
-                        <a class="btn-curved nav-link fw-bold mb-4 me-3" href="#">Registrarse</a>
-                        <a class="btn-curved nav-link me-2 fw-bold" href="#">Iniciar Sesión</a>
+                    <a class="btn-curved nav-link fw-bold mb-4 me-3" href="register.php">Registrarse</a>
+                        <a class="btn-curved nav-link me-2 fw-bold" href="login.html">Iniciar Sesión</a>
                     </div>
                 </div>
                 <div class="border-top py-4">
@@ -279,7 +282,50 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">  
+    </script>
+     <script>
+        function readURL(input) {
+            if(input.files && input.files[0]){
+                let reader = new FileReader();
+
+                reader.onload = function(e) {
+                    let preview = document.getElementById('preview').setAttribute('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        document.querySelector('#add-ingredient').addEventListener('click', function(){
+
+            event.preventDefault();
+            let ingredient = document.createElement("div");
+            let id = "ingredient-"+Date.now();
+            ingredient.id = id;
+            document.querySelector('#ingredients').appendChild(ingredient);
+
+            let label = document.createElement("label");
+            label.innerText = "Ingredient";
+            label.setAttribute('for', 'ingredient');
+            label.
+            document.querySelector('#'+id).appendChild(label);
+
+            let input = document.createElement("input");
+            input.type = "text";            
+            input.setAttribute('name', "ingredients[]");
+            document.querySelector('#'+id).appendChild(input);
+
+            let btn = document.createElement("button");
+            btn.innerText = "remove";
+            btn.addEventListener("click", function() { 
+                document.querySelector('#'+id).remove();
+            });
+            document.querySelector('#'+id).appendChild(btn);
+
+        });
+        
+    </script>
 
 </body>
 
