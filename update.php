@@ -1,5 +1,14 @@
 <?php
     require 'db.php';
+
+    $ingredients = "";
+    foreach ($_POST["ingredients"] as $key => $ingredient) {
+        if($key == array_key_last($_POST["ingredients"])){
+            $ingredients.= $ingredient;
+        }else{
+            $ingredients.= $ingredient.",";
+        }
+    }
     
     $database-> update ("tb_recipes",[
     "recipe_name"=>$_POST["nombreReceta"],
@@ -9,7 +18,7 @@
     "recipe_portions"=>$_POST["porciones"],
     "recipe_steps"=>$_POST["instrucciones"],
     "recipe_description"=>$_POST["descripcion"],
-    "recipe_ingredients"=>$_POST["ingredientes"],
+    "recipe_ingredients"=> $ingredients,
     "is_featured"=>$_POST["recetaDestacada"],    
     "id_recipe_category"=>$_POST["categoria"], 
     "id_recipe_occasion"=>$_POST["ocasion"],

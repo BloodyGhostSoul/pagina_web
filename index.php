@@ -1,3 +1,25 @@
+<?php     
+    require 'db.php';    
+
+    $category = $database->select("tb_recipe_category","*");
+    $occasion = $database->select("tb_recipe_occasion","*");
+    $complex = $database->select("tb_recipe_complex","*");
+
+    $data= $database->select("tb_recipes",[
+        "[>]tb_recipe_category"=>["id_recipe_category" => "id_recipe_category"],
+        "[>]tb_recipe_occasion"=>["id_recipe_occasion" => "id_recipe_occasion"],
+        "[>]tb_recipe_complex"=>["id_recipe_complex" => "id_recipe_complex"]
+    ],[
+        "tb_recipes.id_recipe",
+        "tb_recipes.recipe_name",    
+        "tb_recipes.is_featured",
+        "tb_recipes.recipe_prep_time",
+        "tb_recipes.recipe_portions",
+        "tb_recipe_category.recipe_category",
+        "tb_recipe_occasion.recipe_occasion",
+        "tb_recipe_complex.recipe_complex",
+    ]);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -449,6 +471,7 @@
 
     <!--/////////////////////////////////////////Recetas//////////////////////////////////////////-->
     <section class="container">
+        
         <h2 class="text-center fw-bold fst-italic display-5">Recetas</h2>
         <div class="row">
             <div class="col-lg-3 col-sm-12 mt-5">
@@ -464,7 +487,8 @@
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                             aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body">
-                                <ul class="list-group list-group-flush">
+                                <ul class="list-group list-group-flush">                                   
+                                    
                                     <li class="list-group-item"><a class="list-link" href="#"><i
                                                 class="fa-solid fa-egg me-3"></i>Desayunos</a> </li>
                                     <li class="list-group-item"><a class="list-link" href="#"><i
@@ -477,6 +501,7 @@
                                                 class="fa-solid fa-ice-cream me-3"></i>Postres</a></li>
                                     <li class="list-group-item"><a class="list-link" href="#"><i
                                                 class="fa-solid fa-bowl-food me-3"></i>Sopas</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -543,90 +568,60 @@
                 </div>
             </div>
 
+            <!--//////////////////////////////////////////Recetas/////////////////////////////////////////-->
+
             <div class="col-lg-9 col-sm-12">
                 <div class="my-5 text-center">
                     <div class="row mx-auto gy-5">
-                        <div class="col col-sm-12 col-lg-4 col-md-6 text-start">
-                            <div class="card-recipe">
-                                <img src="./imgs/card.png" class="card-img-top" alt="Pancakes">
-                                <div class="card-body d-flex">
-                                    <h5 class="align-self-center flex-grow-1 card-title mb-0 p-3 fw-bold fst-italic">
-                                        Nombre de la receta</h5>
-                                    <a class="align-self-center me-2 arrow-link" href="#">
-                                        <i class="icon-link fa-solid fa-circle-chevron-right me-1"></i>
-                                    </a>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
-                                    </li>
-                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
-                                    </li>
-                                    <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-4 col-md-6 text-start">
-                            <div class="card-recipe">
-                                <img src="./imgs/card.png" class="card-img-top" alt="Pancakes">
-                                <div class="card-body d-flex">
-                                    <h5 class="align-self-center flex-grow-1 card-title mb-0 p-3 fw-bold fst-italic">
-                                        Nombre de la receta</h5>
-                                    <a class="align-self-center me-2 arrow-link" href="#">
-                                        <i class="icon-link fa-solid fa-circle-chevron-right me-1"></i>
-                                    </a>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
-                                    </li>
-                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
-                                    </li>
-                                    <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-4 col-md-6 text-start">
-                            <div class="card-recipe">
-                                <img src="./imgs/card.png" class="card-img-top" alt="Pancakes">
-                                <div class="card-body d-flex">
-                                    <h5 class="align-self-center flex-grow-1 card-title mb-0 p-3 fw-bold fst-italic">
-                                        Nombre de la receta</h5>
-                                    <a class="align-self-center me-2 arrow-link" href="#">
-                                        <i class="icon-link fa-solid fa-circle-chevron-right me-1"></i>
-                                    </a>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
-                                    </li>
-                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
-                                    </li>
-                                    <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-4 col-md-6 text-start">
-                            <div class="card-recipe">
-                                <img src="./imgs/card.png" class="card-img-top" alt="Pancakes">
-                                <div class="card-body d-flex">
-                                    <h5 class="align-self-center flex-grow-1 card-title mb-0 p-3 fw-bold fst-italic">
-                                        Nombre de la receta</h5>
-                                    <a class="align-self-center me-2 arrow-link" href="#">
-                                        <i class="icon-link fa-solid fa-circle-chevron-right me-1"></i>
-                                    </a>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
-                                    </li>
-                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
-                                    </li>
-                                    <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        
 
+                        <?php 
+                            $len = count($data);
+                            for($i=0; $i<$len; $i++){
+                                echo '<div class="col col-sm-12 col-lg-4 col-md-6 text-start">';
+                                    echo '<div class="card-recipe">';
+                                        echo '<img src="./imgs/card.png" class="card-img-top" alt="Pancakes">';
+                                        echo '<div class="card-body d-flex">';
+                                            echo' <h5 class="align-self-center flex-grow-1 card-title mb-0 p-3 fw-bold fst-italic">'
+                                                .$data[$i]["recipe_name"].'</h5>';
+                                            echo '<a class="align-self-center me-2 arrow-link" href="recipe.php?id='.$data[$i]["id_recipe"].'">
+                                                <i class="icon-link fa-solid fa-circle-chevron-right me-1"></i>
+                                            </a>';
+                                            echo '</div>' ;
+                                        echo '<ul class="list-group list-group-flush">';
+                                            echo '<li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time: '.$data[$i]["recipe_prep_time"].'
+                                            </li>';
+                                            echo '<li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones: '.$data[$i]["recipe_portions"].'
+                                            </li>';
+                                            echo '<li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad: '.$data[$i]["recipe_complex"].'
+                                            </li>';
+                                        echo '</ul>';
+                                    echo '</div>'; 
+                                echo '</div>';
+                            }
+                        ?>
+                            
+                        
+                        <div class="col-sm-12 col-lg-4 col-md-6 text-start">
+                            <div class="card-recipe">
+                                <img src="./imgs/card.png" class="card-img-top" alt="Pancakes">
+                                <div class="card-body d-flex">
+                                    <h5 class="align-self-center flex-grow-1 card-title mb-0 p-3 fw-bold fst-italic">
+                                        Nombre de la receta</h5>
+                                    <a class="align-self-center me-2 arrow-link" href="#">
+                                        <i class="icon-link fa-solid fa-circle-chevron-right me-1"></i>
+                                    </a>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Prep. time
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>                     
                     </div>
                 </div>
             </div>
@@ -663,7 +658,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 my-4">
-                <a class="btn-curved nav-link fw-bold mb-4 me-3" href="register.php">Registrarse</a>
+                    <a class="btn-curved nav-link fw-bold mb-4 me-3" href="register.php">Registrarse</a>
                         <a class="btn-curved nav-link me-2 fw-bold" href="login.html">Iniciar Sesión</a>
                 </div>
             </div>

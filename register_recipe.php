@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
         onerror="this.onerror=null;this.href='./css/vendors/bootstrap.min.css';">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
 
     <title>Recipe Register</title>
@@ -205,7 +207,7 @@
                             <div id="ingredients">
                                 
                             </div>
-                            <button type="button" id="add-ingredient">Añadir ingredientes</button>
+                            <button type="button" id="add-ingredient" class="btn-curved mt-3">Añadir ingredientes</button>
     
                         </div>
 
@@ -284,7 +286,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous">  
     </script>
-     <script>
+
+    <script>
         function readURL(input) {
             if(input.files && input.files[0]){
                 let reader = new FileReader();
@@ -303,25 +306,27 @@
             let ingredient = document.createElement("div");
             let id = "ingredient-"+Date.now();
             ingredient.id = id;
+            ingredient.setAttribute('class', 'mt-2');
             document.querySelector('#ingredients').appendChild(ingredient);
 
             let label = document.createElement("label");
-            label.innerText = "Ingredient";
-            label.setAttribute('for', 'ingredient');
-            label.
+            label.innerText = "Ingrediente";
+            label.setAttribute('for', 'ingredient');            
             document.querySelector('#'+id).appendChild(label);
 
             let input = document.createElement("input");
             input.type = "text";            
             input.setAttribute('name', "ingredients[]");
+            input.setAttribute('class', 'mx-3');
             document.querySelector('#'+id).appendChild(input);
 
-            let btn = document.createElement("button");
-            btn.innerText = "remove";
-            btn.addEventListener("click", function() { 
+            
+            let i = document.createElement("i");
+            i.setAttribute('class', 'icon-link fa-solid fa-trash-can');
+            i.addEventListener("click", function() { 
                 document.querySelector('#'+id).remove();
             });
-            document.querySelector('#'+id).appendChild(btn);
+            document.querySelector('#'+id).appendChild(i);
 
         });
         

@@ -39,6 +39,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
         onerror="this.onerror=null;this.href='./css/vendors/bootstrap.min.css';">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
 
     <title>Recipe Register</title>
@@ -244,8 +246,23 @@
 
                         <div class="col-lg-7 col-md-9 col-sm-12 my-4">
                             <label for="ingredientes" class="form-label fw-bold">Ingredientes</label>
-                            <textarea id="ingredientes" class="form-control" name="ingredientes"
-                            placeholder="Ingredientes" value="<?php echo $data[0]["recipe_ingredients"]; ?>"></textarea>
+                            <div id="ingredients">
+                                <?php 
+                                    $ingredients = [];
+                                    $ingredients = explode(",",$data[0]["recipe_ingredients"]);
+                                    
+                                    foreach ($ingredients as $ingredient){
+                                        echo "<div class='mt-2'>";
+                                        echo "<label>Ingrediente</label>";
+                                        echo "<input type='text' name='ingredients[]' class='mx-3' value='$ingredient'>";
+                                        echo "<i class='icon-link fa-solid fa-trash-can' onclick ='click(event);'></i>";
+                                        echo "</div>";
+
+                                    }
+                                ?>
+                                
+                            </div>
+                            <button type="button" id="add-ingredient" class="btn-curved mt-3">Añadir ingredientes</button>
                         </div>
 
                         <div class="col-lg-7 col-md-9 col-sm-12 my-4">
@@ -323,6 +340,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script>
+    
+        function click(event) {  
+            document.querySelector('#'+id).remove();
+        }     
+
+        function readURL(input) {
+            if(input.files && input.files[0]){
+                let reader = new FileReader();
+
+                reader.onload = function(e) {
+                    let preview = document.getElementById('preview').setAttribute('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        document.querySelector('#add-ingredient').addEventListener('click', function(){
+
+            event.preventDefault();
+            let ingredient = document.createElement("div");
+            let id = "ingredient-"+Date.now();
+            ingredient.id = id;
+            ingredient.setAttribute('class', 'mt-2');
+            document.querySelector('#ingredients').appendChild(ingredient);
+
+            let label = document.createElement("label");
+            label.innerText = "Ingrediente";
+            label.setAttribute('for', 'ingredient');            
+            document.querySelector('#'+id).appendChild(label);
+
+            let input = document.createElement("input");
+            input.type = "text";            
+            input.setAttribute('name', "ingredients[]");
+            input.setAttribute('class', 'mx-3');
+            document.querySelector('#'+id).appendChild(input);
+
+            
+            let i = document.createElement("i");
+            i.setAttribute('class', 'icon-link fa-solid fa-trash-can');
+            i.addEventListener("click", function() { 
+                document.querySelector('#'+id).remove();
+            });
+            document.querySelector('#'+id).appendChild(i);
+
+            });
+</script>
 
 </body>
 

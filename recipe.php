@@ -1,3 +1,21 @@
+<?php 
+    
+    require 'db.php';
+    
+    // Reference: https://medoo.in/api/select
+    $category = $database->select("tb_recipe_category","*");
+    $occasion = $database->select("tb_recipe_occasion","*");
+    $complex = $database->select("tb_recipe_complex","*");
+   
+
+    if(isset($_GET)){
+    $data = $database->select("tb_recipes", "*", [
+        "id_recipe" => $_GET["id"]
+    ]);
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,8 +98,15 @@
             </div>
             <div class="col-lg-6 d-flex mx-auto px-4 my-4">
                 <div class="align-self-center">
-                    <h2 class="display-6 fw-bold mb-3">Nombre de la Receta</h2>
-                    <h4 class="fw-bold text-yellow fst-italic mb-3">Receta Destacada</h4>
+                    <h2 class="display-6 fw-bold mb-3"><?php echo $data[0]["recipe_name"]; ?></h2>
+                    
+                    <?php 
+                        if($data[0]["is_featured"]=== S){
+                            echo '<h4 class="fw-bold text-yellow fst-italic mb-3">Receta Destacada</h4>'
+                        }
+                    ?>
+
+                    
                     <p class="content">Morbi id mi eget arcu ullamcorper luctus. In in tellus porttitor erat sagittis
                         tincidunt vel
                         vitae felis. Aenean rhoncus diam eget lacus imperdiet, a luctus libero varius. Nunc eget erat

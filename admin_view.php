@@ -1,6 +1,6 @@
 <?php 
     require 'db.php';
-    $mo = "Churro";
+   
 
     $data= $database->select("tb_recipes",[
         "[>]tb_recipe_category"=>["id_recipe_category" => "id_recipe_category"],
