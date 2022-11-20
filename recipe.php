@@ -101,33 +101,27 @@
                     <h2 class="display-6 fw-bold mb-3"><?php echo $data[0]["recipe_name"]; ?></h2>
                     
                     <?php 
-                        if($data[0]["is_featured"]=== S){
-                            echo '<h4 class="fw-bold text-yellow fst-italic mb-3">Receta Destacada</h4>'
+                        if($data[0]["is_featured"]=== "S"){
+                            echo '<h4 class="fw-bold text-yellow fst-italic mb-3">Receta Destacada</h4>';
                         }
                     ?>
 
                     
-                    <p class="content">Morbi id mi eget arcu ullamcorper luctus. In in tellus porttitor erat sagittis
-                        tincidunt vel
-                        vitae felis. Aenean rhoncus diam eget lacus imperdiet, a luctus libero varius. Nunc eget erat
-                        vitae neque finibus consequat euismod quis turpis. Cras eu metus convallis, placerat mi nec,
-                        fringilla arcu. In porttitor gravida est quis vestibulum. Ut diam neque, volutpat quis risus eu,
-                        maximus ultricies dolor. Aenean mattis, ex et venenatis egestas, tortor libero scelerisque sem,
-                        sed iaculis enim quam nec enim. In elit mauris, maximus sed ante ut, porta dignissim ex. Vivamus
-                        dapibus tortor et diam laoreet tincidunt sed et felis.
-                    </p>
+                    <p class="content"><?php echo $data[0]["recipe_description"]; ?></p>
                 </div>
             </div>
         </div>
 
         <div class="row px-4">
             <div class="col-1"><a class="text-dark text-decoration-none" href="#"><i
-                        class="icon-link fa-solid fa-thumbs-up me-3"></i>0</a></div>
+                        class="icon-link fa-solid fa-thumbs-up me-3"></i><?php echo $data[0]["recipe_votes"]; ?></a></div>
+            <!--
             <div class="col-1"> <a class="text-dark text-decoration-none" href="#"><i
                         class="icon-link fa-solid fa-bookmark"></i></a></div>
             <div class="col-1"> <a class="text-dark text-decoration-none" href="#"><i 
                         class="icon-link fa-solid fa-share"></i></a>
             </div>
+            -->
         </div>
     </div>
     <hr>
@@ -139,15 +133,15 @@
         <div>
             <ul class="list-group list-group-flush content">
                 <li class="list-group-item"><i class="fa-solid fa-clock me-3"></i>Tiempo de preparación: <span
-                        class="fst-italic text-grey">10 min</span> </li>
+                        class="fst-italic text-grey"><?php echo $data[0]["recipe_prep_time"]; ?> min</span> </li>
                 <li class="list-group-item"><i class="fa-solid fa-clock-rotate-left me-3"></i>Tiempo de cocción: <span
-                        class="fst-italic text-grey">10 min</span> </li>
+                        class="fst-italic text-grey"><?php echo $data[0]["recipe_cook_time"]; ?> min</span> </li>
                 <li class="list-group-item"><i class="fa-solid fa-hourglass-half me-3"></i>Tiempo de total: <span
-                        class="fst-italic text-grey">10 min</span> </li>
+                        class="fst-italic text-grey"><?php echo $data[0]["recipe_total_time"]; ?> min</span> </li>
                 <li class="list-group-item"><i class="fa-solid fa-utensils me-3"></i>Porciones: <span
-                        class="fst-italic text-grey">10 porciones</span> </li>
+                        class="fst-italic text-grey"><?php echo $data[0]["recipe_portions"]; ?></span> </li>
                 <li class="list-group-item"><i class="fa-solid fa-square-check me-3"></i>Dificultad: <span
-                        class="fst-italic text-grey">Fácil</span> </li>
+                        class="fst-italic text-grey"><?php echo $data[0]["id_recipe_complex"]; ?> </span> </li>
             </ul>
         </div>
     </div>
@@ -259,19 +253,7 @@
     <div class="container my-4">
         <h4 class="fw-bold mb-4">Ingredientes</h4>
         <div>
-            <p class="content">
-                4 torta de Hamburguesa de punta de Solomo (puedes conseguirla en GICO) <br>
-                2 cebolla pequeña <br>
-                4 cucharadas de aceite <br>
-                2 cucharadas de mostaza Dijon <br>
-                4 huevos <br>
-                2 cucharada de pepinillos <br>
-                Sal y pimienta <br>
-                4 pan de hamburguesa <br>
-                4 cucharadas de Mayonesa <br>
-                Hojas de lechuga <br>
-                1 mozzarella fresco <br>
-                4 higos caramelizados</p>
+            <p class="content"><?php echo $data[0]["recipe_ingredients"]; ?> </p>
         </div>
     </div>
     <hr>
@@ -281,15 +263,7 @@
     <div class="container my-4 mb-5">
         <h4 class="fw-bold mb-4">Instrucciones de Preparación</h4>
         <div>
-            <p class="content">
-                Coloque la torta en la parrilla o plancha, pele las cebollas y córtelos en aros y cocine. Cocine los
-                huevos con 1 cucharada de aceite. Escurra los pepinillos
-
-                Abra los panes y caliéntelos, agregue la mayonesa, coloque una hoja de lechuga en la parte inferior,
-                corte el queso mozzarella en rodajas y coloque sobre la lechuga, corte los higos en trozos pequeños y
-                colóquelos sobre el queso, después colocar la cebolla cocida, coloque la torta de hamburguesa cocida por
-                ambos lados y coloque la mostaza, el huevo frito y los pepinillos. Cierre con la parte superior del pan,
-                sirva y disfrute.
+            <p class="content"><?php echo $data[0]["recipe_steps"]; ?></p>
         </div>
     </div>
     <hr>
