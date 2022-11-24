@@ -9,10 +9,10 @@
     if(!isset($database)){
         $database = new Medoo([
             'type'=>'mysql',
-            'host' => 'localhost',
-            'database' => 'become_the_chef',
-            'username' => 'root',
-            'password' => ''
+            'host' => 'db4free.net:3306', //db4free.net:3306
+            'database' => 'recipes22',
+            'username' => 'admin22',
+            'password' => 'Desarrollo2022'
         ]);
     }
 
