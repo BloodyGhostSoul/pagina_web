@@ -2,7 +2,8 @@
     require 'db.php';    
 
     $category = $database->select("tb_recipe_category","*");
-    $occasion = $database->select("tb_recipe_occasions","*");
+    $occasions = $database->select("tb_recipe_ocassions","*");
+    //var_dump($occasions);
     $complex = $database->select("tb_recipe_levels","*");
 
     
@@ -191,21 +192,13 @@
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                             aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body">
-                                <ul class="list-group list-group-flush">                                   
-                                    
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-egg me-3"></i>Desayunos</a> </li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-glass-water me-3"></i>Bebidas</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-bell-concierge me-3"></i>Entradas</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-utensils me-3"></i>Almuerzos</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-ice-cream me-3"></i>Postres</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-bowl-food me-3"></i>Sopas</a></li>
-                                    
+                                <ul class="list-group list-group-flush"> 
+                                    <?php 
+                                        foreach($category as $category){
+                                            echo '<li class="list-group-item"><a class="list-link" href="#"><i
+                                            class="fa-solid fa-utensils me-3"></i>'.$category["recipe_category"].'</a> </li>';
+                                        }
+                                    ?>   
                                 </ul>
                             </div>
                         </div>
@@ -224,22 +217,12 @@
                             aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-calendar-check me-3"></i>Todas</a> </li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-calendar-check me-3"></i>Cumpleaños</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-calendar-check me-3"></i>Día del Padre</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-calendar-check me-3"></i>Día de la Madre</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-calendar-check me-3"></i>Día del niño</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-calendar-check me-3"></i>Navidad</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-calendar-check me-3"></i>Semana Santa</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-calendar-check me-3"></i>Verano</a></li>
+                                <?php 
+                                    foreach($occasions as $occasion){
+                                        echo '<li class="list-group-item"><a class="list-link" href="#"><i
+                                        class="fa-solid fa-calendar-check me-3"></i>'.$occasion["recipe_ocassion"].'</a> </li>';
+                                    }
+                                 ?>                                    
                                 </ul>
                             </div>
                         </div>
@@ -257,12 +240,12 @@
                             aria-labelledby="panelsStayOpen-headingThree">
                             <div class="accordion-body">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-square-check me-3"></i>Fácil</a> </li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-square-check me-3"></i>Intermedio</a></li>
-                                    <li class="list-group-item"><a class="list-link" href="#"><i
-                                                class="fa-solid fa-square-check me-3"></i>Avanzado</a></li>
+                                <?php 
+                                    foreach($complex as $level){
+                                        echo '<li class="list-group-item"><a class="list-link" href="#"><i
+                                        class="fa-solid fa-square-check me-3"></i>'.$level["recipe_level"].'</a> </li>';
+                                    }
+                                 ?>                                     
                                 </ul>
                             </div>
                         </div>
@@ -307,7 +290,7 @@
                             }
                         ?>
                             
-                        
+                        <!--
                         <div class="col-sm-12 col-lg-4 col-md-6 text-start">
                             <div class="card-recipe">
                                 <img src="./imgs/card.png" class="card-img-top" alt="Pancakes">
@@ -327,7 +310,8 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>                     
+                        </div> 
+                        -->                    
                     </div>
                 </div>
             </div>
