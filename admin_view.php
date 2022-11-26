@@ -69,8 +69,9 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-scroll gap-2">
                         <li class="nav-item d-flex me-2">
-                            <a class="nav-link align-self-center fw-bold" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link align-self-center fw-bold" href="#">Inicio</a>
                         </li>
+                        <!--
                         <li class="nav-item d-flex me-2">
                             <a class="nav-link align-self-center fw-bold" href="#">Acerca de</a>
                         </li>
@@ -79,7 +80,8 @@
                         </li>
                         <li class="nav-item me-2">
                             <a class="btn-curved nav-link me-2 fw-bold" href="#">Cerrar Sesión</a>
-                        </li>                        
+                        </li>    
+                        -->                    
                     </ul>
                 </div>
 

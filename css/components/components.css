@@ -61,6 +61,17 @@
     color: var(--clr-black);
 }
 
+.card-recipe{
+    word-wrap: break-word;
+    max-width: 295px;
+}
+
+.img-card-recipe{
+    overflow: hidden;
+    width: 295px;
+    height: 295px;   
+}
+
 .circle {
     width: 50px;
     height: 50px;
