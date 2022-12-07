@@ -16,44 +16,44 @@
         return $randomString;
     }
 
-$links = ["https://www.cocinafacil.com.mx/recetas-de-comida/receta/pay-de-calabaza-receta-con-orilla-de-masa/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/sidra-de-manzana-casera-para-el-thanksgiving/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/salsa-tartara-tradicional/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/ensalada-mexicana-con-pollo/,
-https://www.cocinafacil.com.mx/recetas/fajitas-de-res-en-freidora-de-aire/,
-https://www.cocinafacil.com.mx/recetas/sopa-de-cebolla-rostizada/,
-https://www.cocinafacil.com.mx/recetas/pollo-con-salsa-de-arandanos/,
-https://www.cocinafacil.com.mx/recetas/ensalada-con-aderezo-de-yogur/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/pay-de-queso-frio/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/churros-con-chocolate/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/delicioso-chocolate-oaxaqueno-bebida-caliente/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/pancita-en-mole-rojo-con-xoconostles/,
-https://www.cocinafacil.com.mx/recetas/tisana-de-frutos-rojos-beneficios/,
-https://www.cocinafacil.com.mx/recetas/pay-de-pera-con-manzana-y-crumble/,
-https://www.cocinafacil.com.mx/recetas/ponche-de-tamarindo-con-tejocotes/,
-https://www.cocinafacil.com.mx/recetas/atole-de-mandarina/,
-https://www.cocinafacil.com.mx/recetas/mictlan-bebida-de-los-muertos/,
-https://www.cocinafacil.com.mx/recetas/pan-de-muerto-acaramelado/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/tamal-de-flor-de-calabaza/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/molletes-mexicanos/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/sandwich-de-pollo-asado-con-aguacate-y-manzana/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/atun-sellado-con-ensalada/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/cajun-de-langostinos/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/que-preparar-con-una-lata-de-atun-tostadas-rendidoras-y-economicas/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/taco-arabe-de-pescado-empanizado-con-ajonjoli/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/filete-de-salmon-marinado-en-miel/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/ensalada-con-atun-y-arroz/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/recetas-con-espinacas-medallones-de-manzana/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/comida-sana-y-rapida-ensalada-de-jitomate/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/ensalada-de-col-con-brocoli/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/papa-en-fetuccini-con-ragu-de-jitomate-y-berenjena/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/huaraches-con-costilla/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/pasta-cremosa-con-atn/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/la-deliciosa-moussaka/,
-https://www.cocinafacil.com.mx/recetas-de-comida/receta/tarta-de-jitomates-rostizados/"];
+$links = ["https://www.cocinafacil.com.mx/recetas-de-comida/receta/pay-de-calabaza-receta-con-orilla-de-masa/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/sidra-de-manzana-casera-para-el-thanksgiving/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/salsa-tartara-tradicional/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/ensalada-mexicana-con-pollo/",
+"https://www.cocinafacil.com.mx/recetas/fajitas-de-res-en-freidora-de-aire/",
+"https://www.cocinafacil.com.mx/recetas/sopa-de-cebolla-rostizada/",
+"https://www.cocinafacil.com.mx/recetas/pollo-con-salsa-de-arandanos/",
+"https://www.cocinafacil.com.mx/recetas/ensalada-con-aderezo-de-yogur/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/pay-de-queso-frio/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/churros-con-chocolate/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/delicioso-chocolate-oaxaqueno-bebida-caliente/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/pancita-en-mole-rojo-con-xoconostles/",
+"https://www.cocinafacil.com.mx/recetas/tisana-de-frutos-rojos-beneficios/",
+"https://www.cocinafacil.com.mx/recetas/pay-de-pera-con-manzana-y-crumble/",
+"https://www.cocinafacil.com.mx/recetas/ponche-de-tamarindo-con-tejocotes/",
+"https://www.cocinafacil.com.mx/recetas/atole-de-mandarina/",
+"https://www.cocinafacil.com.mx/recetas/mictlan-bebida-de-los-muertos/",
+"https://www.cocinafacil.com.mx/recetas/pan-de-muerto-acaramelado/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/tamal-de-flor-de-calabaza/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/molletes-mexicanos/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/sandwich-de-pollo-asado-con-aguacate-y-manzana/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/atun-sellado-con-ensalada/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/cajun-de-langostinos/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/que-preparar-con-una-lata-de-atun-tostadas-rendidoras-y-economicas/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/taco-arabe-de-pescado-empanizado-con-ajonjoli/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/filete-de-salmon-marinado-en-miel/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/ensalada-con-atun-y-arroz/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/recetas-con-espinacas-medallones-de-manzana/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/comida-sana-y-rapida-ensalada-de-jitomate/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/ensalada-de-col-con-brocoli/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/papa-en-fetuccini-con-ragu-de-jitomate-y-berenjena/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/huaraches-con-costilla/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/pasta-cremosa-con-atn/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/la-deliciosa-moussaka/",
+"https://www.cocinafacil.com.mx/recetas-de-comida/receta/tarta-de-jitomates-rostizados/"];
 
 
-    if($_POST){
+    // if($_POST){
         //https://geonode.com/free-proxy-list/
         $proxyurl = '81.95.232.73:3128';
 
@@ -64,11 +64,13 @@ https://www.cocinafacil.com.mx/recetas-de-comida/receta/tarta-de-jitomates-rosti
             'max_redirects' => 3)
         );
 
+        for($i=0;$i<count($links);$i++){
+
         $recipe = [];
         $ingredients = [];
         $directions = [];
         
-        $detailed_recipe = file_get_html($_POST["link"], 0, $context);
+        $detailed_recipe = file_get_html($links[$i], 0, $context);
 
         $data['name'] = $detailed_recipe->find('h1',0)->plaintext;
         
@@ -77,15 +79,12 @@ https://www.cocinafacil.com.mx/recetas-de-comida/receta/tarta-de-jitomates-rosti
             $data['image'] = "no image";
         }else {
             $data['image'] = $image->src;
-            file_put_contents("./imgs/recipe-".generateRandomString().".png",file_get_contents($image->src));
+            file_put_contents("./imgs/recipes/recipe-".generateRandomString().".png",file_get_contents($image->src));
         }
 
         $data['description'] = $detailed_recipe->find('.simmer-recipe-description p', 0)->plaintext;
-       
         $data['yields'] = $detailed_recipe->find('.simmer-recipe-details-list li', 1)->plaintext;
-        $data['category'] = $detailed_recipe->find('.penci-single-cat span a',0)->plaintext;
-        ////////
-        $data['likes'] = $detailed_recipe->find('#votes span',1)->plaintext;
+        $data['likes'] = $detailed_recipe->find('#voting-results span', 1)->plaintext;
         $data['totaltime'] = $detailed_recipe->find('.simmer-recipe-details-list li', 0)->plaintext;
         
         foreach($detailed_recipe->find('.simmer-ingredients li') as $ingredient){
@@ -97,12 +96,26 @@ https://www.cocinafacil.com.mx/recetas-de-comida/receta/tarta-de-jitomates-rosti
             $directions[] = "<li>".$direction->plaintext."</li>";
         }
         $data['directions'] = $directions;
-        
+
+        // Reference: https://medoo.in/api/insert
+        $database->insert("tb_recipes",[
+            "recipe_name"=>$data['name'],
+            "recipe_img"=>$data['image'],
+            "recipe_prep_time"=> "10 min",
+            "recipe_cook_time"=> "20 min",
+            "recipe_votes"=> $data['likes'],
+            "recipe_total_time"=> trim($data['totaltime']),
+            "recipe_portions"=>$data['yields'],
+            "recipe_steps"=> $data['directions'],
+            "recipe_ingredients"=> $data['ingredients'],
+            "recipe_description"=> trim($data['description'])
+        ]);  
         $recipe[] = $data;
 
-        var_dump($recipe);
-        
     }
+   // var_dump($recipe);
+        
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">

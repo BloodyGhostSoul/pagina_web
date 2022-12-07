@@ -10,9 +10,9 @@
         $database = new Medoo([
             'type'=>'mysql',
             'host' => 'db4free.net:3306', //db4free.net:3306
-            'database' => 'recipes22',
-            'username' => 'admin22',
-            'password' => 'Desarrollo2022'
+            'database' => 'become_the_chef2',
+            'username' => 'admin_v2',
+            'password' => 'Desarrollo22'
         ]);
     }
 
